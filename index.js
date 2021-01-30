@@ -57,6 +57,15 @@ timeFormat.format("YYYY-MM-DDTHH:mm");
 const getSlots = generatSlot("9:00","24:00",30,timeFormat.format());
 
 let morningSlot = getSlots.morning.map(i=>{
-  return moment(i).format("h:mm a")
+  return moment(i).format("HH:mm a")
 })
-console.log(getSlots)
+console.log(morningSlot)
+// [
+//   '09:00 am',
+//   '09:30 am',
+//   '10:00 am',
+//   '10:30 am',
+//   '11:00 am',
+//   '11:30 am',
+//   '00:00 am'
+// ]
